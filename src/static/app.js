@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const spotsLeft = details.max_participants - details.participants.length;
 
+        // Create participants list HTML
         const participantsList = details.participants.length > 0
           ? `<ul class="participants-list">${details.participants.map(p => `<li><span class="participant-email">${p}</span><button class="remove-participant" data-email="${p}" title="Remove participant">✖</button></li>`).join('')}</ul>`
           : `<p class="no-participants">No participants signed up yet.</p>`;
